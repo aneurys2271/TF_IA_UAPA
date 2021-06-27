@@ -140,22 +140,12 @@ namespace UAPA
 
         private void btnentrar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            clase_metodos datos = new clase_metodos();
+            
+        }
 
-            if (datos.entrar(txtusuario.Text, txtclave.Text) == true)
-            {
-                Welcome formulario = new Welcome();
-                formulario.Show();
-                this.Hide();
+        private void txtclave_KeyDown(object sender, KeyEventArgs e)
+        {
 
-            }
-            else
-            {
-                MessageBox.Show("usuario o contraseña incorrecta, por favor verificar");
-                txtusuario.Clear();
-                txtclave.Clear();
-                txtusuario.Focus();
-            }
         }
     }
 
